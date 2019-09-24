@@ -1,0 +1,29 @@
+#header{
+	width: 100%;
+	height:250px;
+	background-color: rgb(63,81,181);
+	color: rgb(255,255,255);
+	text-align: center;
+}
+.img1{
+	width: 120px;
+	height: 120px;
+	margin-top: 40px;
+}
+.list{
+   width: 100%;
+   line-height: 40px;
+   background-color: rgba(0, 0, 0, 0.08);
+   display:flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+.list li{
+	float: left;
+	margin-left:10%;
+}
+.list li>a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
