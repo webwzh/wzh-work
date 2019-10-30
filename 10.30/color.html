@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>		
+   <div id="boxs">
+   	   <div ></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+   </div>
+   <div id="div"></div>           
+    <script>   
+	      $("#boxs").css({
+			 
+		  })
+           $("#boxs>div").css({
+           "position":"absolute",   
+           "width":"70px",
+           "height":"70px",
+           "border-radius":"50%",
+           "display":"inline-block",
+           "border":"2px solid white",
+           "transition":"0.5s",
+           "top":"15px",
+		   "left":"20px",
+		   
+           }); 
+			$("#div").css({
+				"position":"absolute",
+			      "width":"100px",
+			      "height":"100px",
+			      "border-radius":"50%",
+			      "background-color":"green",
+				   "border":"2px solid white",
+			        "z-index":"1000",
+					"top":"0px",
+					"left":"0px"
+			      });
+           $("#boxs>div:nth-child(1)").css("background-color","red")
+           $("#boxs>div:nth-child(2)").css("background-color","orange")
+           $("#boxs>div:nth-child(3)").css("background-color","yellow")
+           $("#boxs>div:nth-child(4)").css("background-color","green")
+           $("#boxs>div:nth-child(5)").css("background-color","cyan")
+           $("#boxs>div:nth-child(6)").css("background-color","blue")
+           $("#boxs>div:nth-child(7)").css("background-color","purple") 
+            var a=0;
+            $("#div").click(function(){               
+				 a++;
+                 if(a%2==0){
+					  $("#boxs>div").css({"margin-left":"0"});
+					 
+				 }else{
+					 $("#boxs>div:nth-child(1)").css({"margin-left":"100px"})
+					 $("#boxs>div:nth-child(2)").css({"margin-left":"200px"})
+					 $("#boxs>div:nth-child(3)").css({"margin-left":"300px"})
+					 $("#boxs>div:nth-child(4)").css({"margin-left":"400px"})
+					 $("#boxs>div:nth-child(5)").css({"margin-left":"500px"})
+					 $("#boxs>div:nth-child(6)").css({"margin-left":"600px"})
+					 $("#boxs>div:nth-child(7)").css({"margin-left":"700px"})  
+				
+				 }                           
+           })
+		  $("#boxs>div").click(function(){
+			  
+			  var background = $(this).css('background');
+			  	  $('body').css('background',background);
+				  $('#div').css('background',background);
+		  })
+           
+    </script>
+</body>
+</html>
